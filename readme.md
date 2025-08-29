@@ -68,10 +68,9 @@
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
  ‍ Answer:
      --> event.preventDefault()
-
      এই method কোনো element এর default behavior বন্ধ করে দেয়।
-    --> event.stopPropagation()
 
+    --> event.stopPropagation()
     এই method event bubbling বন্ধ করে দেয়।
     event আর parent element পর্যন্ত propagate হবে না।
 
