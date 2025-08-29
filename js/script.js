@@ -67,7 +67,11 @@ document.getElementById("clear-button").addEventListener("click", function(){
     const card = copyButton.parentNode.parentNode;
     const number = card.querySelector(".number").innerText;
     alert(`নম্বর Copy হয়েছে:${number}`);
-      
+     
+    // copy hotline number and paste anywhere
+     
+    navigator.clipboard.writeText(number);
+    
   // copy count
     copyBalance++;
    const availableCopyPoint = document.getElementById("copy-balance");

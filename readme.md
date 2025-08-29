@@ -1,166 +1,83 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
 
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
-
-### 📅 No Deadline For 50 marks
-
-### 📅 Deadline For 30 marks: Any time after 29th August.
-
----
-
-## ✅ Main Requirements (50 Marks)
-
-### 1. Navbar
-
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
-
----
-
-### 2. Hero Section
-
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
-
----
-
-### 2. Main Section
-
-This Section will have layout as figma
-
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
-
-### Emergency Hotline Section
-
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
-
-### History Section
-
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
-
----
-
-### 3. Responsiveness (5 Marks)
-
-- Website should be fully **responsive for mobile devices** (implementation up to you)
-
----
-
-## Functionalities
-
-### 4. Heart Icons
-
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
-
----
-
-### 5. Call Buttons
-
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
-
----
-
-### 5. Call History Section
-
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
-
----
 
 ## Create Readme
 
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
-
-### 6. Answer the following questions clearly:
+### Answer thequestions:
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
+  Answer :  getElementById--> Dom এর ভিতরে কোনো নির্দিষ্ট উপাদান কে খুজতে getElementById ব্যবহার করা হয়। যে উপাদানকে দেখতে চাই তাকে একটা  id set করে দিয়ে then document.getElementById("id name") দিলে ওই নির্দিষ্ট উপাদানকে দেখা যায়।
+
+  Difference:
+
+   1. শুধু একটা element রিটার্ন করে (কারণ এক পেইজে একই id একবারই থাকে )।
+   2. সরাসরি সেই element object দেয়।
+
+
+  getElementsByClassName:  Dom এর ভিতরে যদি একাধিক উপাদান কে একসাথে খুজতে বা একাধিক উপাদানের উপর একসাথে ফাংশন ব্যবহার করতে চাই তখন প্রত্যেকের একটা common class name দিয়ে তারপর document.getElementByClassName("class name") দিয়ে প্রতিটা উপাদানকে একসাথে খুঁজে বের করা যায়  এবং প্রত্যেক উপাদানকে একটা একটা করে দেখতে for loop চালাতে হয়।
+
+  1. একাধিক element থাকলে সবগুলো রিটার্ন করে।
+  2. Output হয় একটা HTMLCollection (array-এর মত, কিন্তু পুরোপুরি array না)।
+   তাই loop চালাতে হয় (for loop বা for...of)।
+
+
+  querySelector: কোনো class/ id এর মধ্যে যদি একাধিক (id, class,tag সবকিছু ) এমন থাকে তাহলে তাদের মধ্যে ফাস্ট যে উপাদান থাকবে সেটা পেতে querySelector use করা হয় ।
+
+  1. শুধু প্রথম element রিটার্ন করে যা match করে।
+
+  querySelectorAll: কোনো class/ id এর মধ্য থেকে যদি কোনো p,h1 বা কোনো class  কে দেখতে চাই তখন querySelectorAll দিতে হবে। যেমন, document.querySelectorAll(" id/ class name span "); output : span গুলো
+  
+  1. সব matching element গুলো রিটার্ন করে।
+
+  2. Output হয় একটা NodeList।
+ 
+
 2. How do you **create and insert a new element into the DOM**?
+  Answer:
+   step1: প্রথমে parent node/ parent container  কে খুজে বের করতে হবে
+
+   step2: createElement দিয়ে new  Child create করতে হবে
+
+   step3:  তারপর যে element গুলো তৈরি করতে চাই সেই গুলো creat করতে হবে। এবং innerText/ innerHtml দিয়ে তার মধ্যে      element set করতে হবে।
+
+   step5: then  appendChild এর মাধ্যমে child এর মধ্যে ঢুকাতে হবে।
+
+   step6: তারপর create section / child কে parent container a appendChild করে দিতে।  তাহলে নতুন একটা child / section create হবে
+ 
 3. What is **Event Bubbling** and how does it work?
+   Answer:
+   Event Bubbling হলো এমন একটা process যেখানে কোনো child element-এ event ঘটলে (যেমন click), সেটা শুধু ওই element-এই থেমে থাকে না — বরং event টা উপরে উপরে তার parent, তারপর grand-parent ... সব element এর মধ্যে propagate (বিস্তার) করতে থাকে।
+
+   its work-->
+
+   যদি html এর মধ্যে কোথাও ক্লিক করা হয় তাহলে এটা body থেকে section. Section থেকে element এবং তার ভিতরের w
+   Element পর্যন্ত খুজতে থাকে কোথায় ক্লিক করা হয়ছে। আর তারপর bubble আকারে উপরে উঠে আসতে থাকে। 
+
+
 4. What is **Event Delegation** in JavaScript? Why is it useful?
+  Answer:
+  Event Delegation : অনেকগুলো child element-এর জন্য আলাদা আলাদা event listener না দিয়ে, তাদের common parent element এ একটা event listener দিলে 
+   event bubbling এর মাধ্যমে কোন child-এ event ঘটেছে
+  সেটা বুঝা যায়।
+  
+  1. Performance বাড়ে : অনেক child element থাকলে প্রতিটায় আলাদা event listener না দিয়ে শুধু parent-এ একটাই event listener বসাতে হয়।
+
+
+  2. Dynamic elements handle হয় :  নতুন কোনো child element DOM-এ যোগ হলো, তখনও event delegation এর কারণে সেটা কাজ করবে। আলাদাভাবে আবার নতুন listener দিতে হবে না।
+
+
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
+ ‍ Answer:
+  1. event.preventDefault()
 
----
+  এই method কোনো element এর default behavior বন্ধ করে দেয়।
+ 2. event.stopPropagation()
 
-## 🧪 Challenges Part (10 Marks)
+  এই method event bubbling বন্ধ করে দেয়।
+  event আর parent element পর্যন্ত propagate হবে না।
 
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
 
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
 
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
 
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
-```
 
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
 
-💡Hint: Search Google with that below question
 
-```bash
-How to get current local time in js
-```
-
----
-
-## ⚙️ Technology Stack
-
-- HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
-
----
-
-## 📌 Rules
-
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
-
----
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
-
----
-
-# Let's Code and Achieve your Dream 🎯
-আমার নাম মোঃ 
