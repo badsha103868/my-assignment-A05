@@ -9,26 +9,26 @@
 
   Difference:
 
-   1. শুধু একটা element রিটার্ন করে (কারণ এক পেইজে একই id একবারই থাকে )।
-   2. সরাসরি সেই element object দেয়।
+   --> শুধু একটা element রিটার্ন করে (কারণ এক পেইজে একই id একবারই থাকে )।
+  --> সরাসরি সেই element object দেয়।
 
 
   getElementsByClassName:  Dom এর ভিতরে যদি একাধিক উপাদান কে একসাথে খুজতে বা একাধিক উপাদানের উপর একসাথে ফাংশন ব্যবহার করতে চাই তখন প্রত্যেকের একটা common class name দিয়ে তারপর document.getElementByClassName("class name") দিয়ে প্রতিটা উপাদানকে একসাথে খুঁজে বের করা যায়  এবং প্রত্যেক উপাদানকে একটা একটা করে দেখতে for loop চালাতে হয়।
 
-  1. একাধিক element থাকলে সবগুলো রিটার্ন করে।
-  2. Output হয় একটা HTMLCollection (array-এর মত, কিন্তু পুরোপুরি array না)।
-   তাই loop চালাতে হয় (for loop বা for...of)।
+   --> একাধিক element থাকলে সবগুলো রিটার্ন করে।
+   --> Output হয় একটা HTMLCollection (array-এর মত, কিন্তু পুরোপুরি array না)।
+    তাই loop চালাতে হয় (for loop বা for...of)।
 
 
   querySelector: কোনো class/ id এর মধ্যে যদি একাধিক (id, class,tag সবকিছু ) এমন থাকে তাহলে তাদের মধ্যে ফাস্ট যে উপাদান থাকবে সেটা পেতে querySelector use করা হয় ।
 
-  1. শুধু প্রথম element রিটার্ন করে যা match করে।
+   --> শুধু প্রথম element রিটার্ন করে যা match করে।
 
   querySelectorAll: কোনো class/ id এর মধ্য থেকে যদি কোনো p,h1 বা কোনো class  কে দেখতে চাই তখন querySelectorAll দিতে হবে। যেমন, document.querySelectorAll(" id/ class name span "); output : span গুলো
   
-  1. সব matching element গুলো রিটার্ন করে।
+   --> সব matching element গুলো রিটার্ন করে।
 
-  2. Output হয় একটা NodeList।
+   --> Output হয় একটা NodeList।
  
 
 2. How do you **create and insert a new element into the DOM**?
@@ -59,21 +59,21 @@
    event bubbling এর মাধ্যমে কোন child-এ event ঘটেছে
   সেটা বুঝা যায়।
   
-  1. Performance বাড়ে : অনেক child element থাকলে প্রতিটায় আলাদা event listener না দিয়ে শুধু parent-এ একটাই event listener বসাতে হয়।
+  --> Performance বাড়ে : অনেক child element থাকলে প্রতিটায় আলাদা event listener না দিয়ে শুধু parent-এ একটাই event listener বসাতে হয়।
 
 
-  2. Dynamic elements handle হয় :  নতুন কোনো child element DOM-এ যোগ হলো, তখনও event delegation এর কারণে সেটা কাজ করবে। আলাদাভাবে আবার নতুন listener দিতে হবে না।
+  --> Dynamic elements handle হয় :  নতুন কোনো child element DOM-এ যোগ হলো, তখনও event delegation এর কারণে সেটা কাজ করবে। আলাদাভাবে আবার নতুন listener দিতে হবে না।
 
 
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
  ‍ Answer:
-  1. event.preventDefault()
+     --> event.preventDefault()
 
-  এই method কোনো element এর default behavior বন্ধ করে দেয়।
- 2. event.stopPropagation()
+     এই method কোনো element এর default behavior বন্ধ করে দেয়।
+    --> event.stopPropagation()
 
-  এই method event bubbling বন্ধ করে দেয়।
-  event আর parent element পর্যন্ত propagate হবে না।
+    এই method event bubbling বন্ধ করে দেয়।
+    event আর parent element পর্যন্ত propagate হবে না।
 
 
 
